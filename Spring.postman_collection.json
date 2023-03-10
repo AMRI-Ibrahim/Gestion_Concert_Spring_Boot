@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "b59f5996-bfdd-4309-81ba-8b3c5f5a0115",
+		"name": "Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25355844"
+	},
+	"item": [
+		{
+			"name": "ShowAllConcerts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \"con_id\": 7,\r\n    \"con_nom\": \"France bleu\",\r\n    \"con_description\": \"Un concert est une représentation musicale d'un ou plusieurs musiciens — chanteurs ou instrumentistes —, en public, gratuite ou non, dans un lieu aménagé à cette occasion — une salle, un jardin, une église, une place, etc.\",\r\n    \"con_date_heure_debut\": \"2023-02-15T19:47:26.000+00:00\",\r\n    \"con_date_heure_fin\": \"2023-02-16T01:47:26.000+00:00\",\r\n    \"soi_id\": 6,\r\n    \"grp_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/concert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"concert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowAllTickets",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "AddConcert",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"con_id\": 23,\r\n        \"con_nom\": \"Rai Raikom\",\r\n        \"con_description\": \"Un concert est une représentation musicale d'un ou plusieurs musiciens — chanteurs ou instrumentistes —, en public, gratuite ou non, dans un lieu aménagé à cette occasion — une salle, un jardin, une église, une place, etc.\",\r\n        \"con_date_heure_debut\": \"2023-02-15T19:47:26.000+00:00\",\r\n        \"con_date_heure_fin\": \"2023-02-16T01:47:26.000+00:00\",\r\n        \"soi_id\": 6,\r\n        \"grp_id\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/concert",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"concert"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowAllSalles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/salle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowSalle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/salle/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salle",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteSalle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/salle/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"salle",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowSoirees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/soiree",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"soiree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ArtisteInConcert",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/artiste/artiste/2/concerts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"artiste",
+						"artiste",
+						"2",
+						"concerts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ShowGroupeWithId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/groupe/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"groupe",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
