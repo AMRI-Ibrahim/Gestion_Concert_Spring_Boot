@@ -1,0 +1,54 @@
+plugins {
+	id 'org.springframework.boot' version '2.6.3'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven {
+		url 'https://repo.clojars.org'
+		name 'Clojars'
+	}
+}
+
+dependencies {
+
+
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'mysql:mysql-connector-java'
+	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	implementation 'org.apache.servicemix.document:org.apache.servicemix.document:1.6.1'
+	implementation 'org.webjars.bowergithub.advanced-rest-client:api-documentation-document:2.0.1'
+	implementation 'fr.opensagres.xdocreport:document:2.0.4'
+	implementation 'me.tatarka.socket:socket:1.0.0'
+	implementation 'server-socket:server-socket:1.0.0'
+	testImplementation 'junit:junit:4.13.1'
+    compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+}
+
+
+test {
+	useJUnitPlatform()
+}
+
+
+
+
+
